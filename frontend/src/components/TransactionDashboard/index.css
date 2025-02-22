@@ -1,0 +1,226 @@
+.main-container {
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  color: white;
+  display: flex;
+}
+
+.sidebar {
+  width: 220px; /* Adjust sidebar width as needed */
+  background-color: #444; /* Darker background for sidebar */
+  padding: 20px;
+  margin-right: 20px; /* Add space between sidebar and content */
+  padding-top: 40px;
+  height: auto;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar-item {
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+.content {
+  width: 100%;
+  margin: 20px;
+  flex: 1; /* Allow content to take remaining space */
+}
+
+.search-month-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-container,
+.month-container {
+  display: flex;
+  align-items: center;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background-color: #333;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.table-button-con {
+  display: flex;
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.pagination-container {
+  margin-top: 20px;
+}
+
+.pagination-container button,
+.search-button,
+.month-dropdown-button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  background-color: darkgray;
+}
+
+.search-container{
+  width: 400px;
+  height: 36px;
+}
+
+.search-button{
+  width: 400px;
+  height: 30px;
+  border: none;
+  outline: none;
+}
+
+.month-dropdown-button:hover {
+  background-color: darkgray;
+}
+
+.page-con{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Style month dropdown button */
+.month-dropdown-button {
+  background-color: #8A428B;
+  border: 1px solid;
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+  margin-left: 10px;
+  outline: none;
+}
+
+.stats-charts-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+
+.chart-container {
+  width: 30%;
+  margin-bottom: 20px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  height: 350px;
+}
+
+
+.pie-container {
+  height: 350px; /* Adjust height as needed */
+  display: flex; /* Use flexbox to center the pie chart */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pie-chart {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.pie-chart canvas {
+  max-width: 80%; /* Ensure the canvas scales within its parent */
+  max-height: 80%;
+}
+
+.stats-container {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 5px;
+  width: 25%;
+  height: 350px;
+}
+
+.stats-container h2 {
+  margin-bottom: 10px;
+}
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* Responsive Styles for devices under 768px */
+@media (max-width: 768px) {
+  .main-container {
+    margin: 10px;
+    padding: 10px;
+  }
+.sidebar{
+  display: none;
+}
+
+  .search-month-container {
+    flex-direction: column; /* Stack search and month selection */
+    align-items: stretch; /* Stretch items to full width */
+  }
+
+  .search-container,
+  .month-container {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 10px; /* Add space between stacked items */
+  }
+
+  .search-button, .search-container {
+    width: 100%;
+  }
+
+  .stats-charts-wrapper {
+    flex-direction: column; /* Stack charts and stats */
+  }
+
+  .chart-container,
+  .stats-container {
+    width: auto; /* Full width on smaller screens */
+    height: 350px; /* Adjust height automatically */
+    margin: 12px;
+  }
+
+  .chart-container {
+    height: 50%; /*reduce chart height*/
+  }
+
+  .pie-container {
+    height: 300px;
+  }
+
+  table th,
+  table td {
+    padding: 6.5px; /* Reduce padding on smaller screens */
+    font-size: 12px; /* Reduce font size */
+  }
+
+  .pagination-container button {
+    padding: 4px 8px; /* Reduce button padding */
+    font-size: 12px; /* Reduce button font size */
+  }
+}
